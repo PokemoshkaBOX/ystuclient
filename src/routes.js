@@ -6,6 +6,7 @@ import BuildMain from "./pages/Build/BuildMain";
 import Menegment from "./pages/Menegment/MenegmentMain";
 import DisignMain from "./pages/Disign/DisignMain";
 import MainStatTwo from "./pages/MainStatTwo/MainStatTwo";
+import ProbaMain from "./pages/Proba/ProbaMain";
 
 import {
     APPLICANTS_ROUTE,
@@ -16,7 +17,9 @@ import {
     BUILD_ROUTE,
     DISIGN_ROUTE,
     MAINSTATTWO_ROUTE,
+    PROBA_ROUTE
 } from "./utils/consts";
+
 
 
 export const authRoutes = [
@@ -51,6 +54,10 @@ export const authRoutes = [
     {
         path: MAINSTATTWO_ROUTE,
         Component: MainStatTwo
+    },
+    {
+        path: PROBA_ROUTE,
+        Component: ProbaMain
     }
 ]
 

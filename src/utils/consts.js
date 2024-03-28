@@ -5,5 +5,5 @@ export const APPLICANTS_ROUTE = '/applicants'
 export const BUILD_ROUTE = '/build'
 export const MENEGMENT_ROUTE = '/menegment'
 export const DISIGN_ROUTE = '/disign'
-
 export const MAINSTATTWO_ROUTE = '/maintwo'
+export const PROBA_ROUTE = '/proba'

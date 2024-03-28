@@ -16,7 +16,7 @@ import {
   MENEGMENT_ROUTE,
   BUILD_ROUTE,
   DISIGN_ROUTE,
-  MAINSTATTWO_ROUTE
+  MAINSTATTWO_ROUTE, PROBA_ROUTE
 } from "../../utils/consts";
 
 const SidebarMenu = () => {
@@ -55,6 +55,9 @@ const SidebarMenu = () => {
         </Link>
         <Link to={DISIGN_ROUTE}>
           <FontAwesomeIcon icon={faUsers} /><span style={{ marginLeft: '5px' }}>{sidebarOpen && 'Архитектуры и дизайна'}</span>
+        </Link>
+        <Link to={PROBA_ROUTE}>
+          <FontAwesomeIcon icon={faUsers} /><span style={{ marginLeft: '5px' }}>{sidebarOpen && 'Проба'}</span>
         </Link>
       </nav>
     </div>

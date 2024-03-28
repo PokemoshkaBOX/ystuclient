@@ -90,3 +90,10 @@ export const getAvgBall = async (Inst) => {
     }})
     return data
 }
+
+export const getProba = async (SELECT, COUNT, GROUP, WHERE) => {
+    const {data} = await $authHost.get('api/didgital/proba',{params: {
+            SELECT, COUNT, GROUP, WHERE
+    }})
+    return data
+}
