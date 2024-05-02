@@ -14,6 +14,7 @@ import StatPoDnyamMain from "./StatPoDnyamMain";
 import ZayavlenyaPoFormamObychenyaMain from "./ZayavlenyaPoFormamObychenyaMain";
 import {MAINSTATTWO_ROUTE} from "../../utils/consts";
 import {useNavigate} from "react-router-dom";
+import RFMap from "../RFMap/RFMap";
 
 const MonitorMain = () => {
     const [currentDateTime, setCurrentDateTime] = useState(new Date());

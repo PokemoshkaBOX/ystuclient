@@ -10,7 +10,7 @@ import StatPoDnyam from "./StatPoDnyam";
 import ZayavPoLevel from "./ZayavPoLevel";
 import OrigDaNet from "./OrigDaNet";
 import {useNavigate} from "react-router-dom";
-import {FACULTY_ROUTE} from "../../utils/consts";
+import {RFMAP_ROUTE} from "../../utils/consts";
 
 const MonitorMain = () => {
     const [currentDateTime, setCurrentDateTime] = useState(new Date());
@@ -18,7 +18,7 @@ const MonitorMain = () => {
 
   // Функция для переключения страницы
   const switchPage = () => {
-    navigate(FACULTY_ROUTE);
+    navigate(RFMAP_ROUTE);
   };
 
   // Функция для обработки нажатия клавиши
