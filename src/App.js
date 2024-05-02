@@ -9,7 +9,6 @@ import {observer} from "mobx-react-lite";
 const App = observer(() =>{
     return (
         <BrowserRouter>
-            <SideBarMenu/>
             <AppRouter/>
         </BrowserRouter>
     );

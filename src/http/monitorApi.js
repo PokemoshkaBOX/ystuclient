@@ -68,3 +68,8 @@ export const getOrig = async (zach) => {
     const {data} = await $authHost.get('api/monitor/orig',zach)
     return data
 }
+
+export const getAllObl = async (zach) => {
+    const {data} = await $authHost.get('api/monitor/allobl',zach)
+    return data
+}

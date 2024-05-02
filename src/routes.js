@@ -17,8 +17,9 @@ import {
     BUILD_ROUTE,
     DISIGN_ROUTE,
     MAINSTATTWO_ROUTE,
-    PROBA_ROUTE
+    PROBA_ROUTE, RFMAP_ROUTE
 } from "./utils/consts";
+import RfMap from "./pages/RFMap/RFMap";
 
 
 
@@ -58,6 +59,10 @@ export const authRoutes = [
     {
         path: PROBA_ROUTE,
         Component: ProbaMain
+    },
+    {
+        path: RFMAP_ROUTE,
+        Component: RfMap
     }
 ]
 

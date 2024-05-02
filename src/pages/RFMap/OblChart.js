@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import 'chart.js/auto';
 import { Chart, BarElement, CategoryScale, LinearScale, Tooltip, Legend} from 'chart.js';
-import {getTable} from "../../http/monitorApi";
+import {getObl} from "../../http/monitorApi";
 
 Chart.register(
   BarElement,
@@ -11,7 +11,7 @@ Chart.register(
   Legend,
 );
 
-const ZayavPoLevel = () => {
+const OblChart = () => {
   const chartContainerRef = useRef(null);
   const chartRef = useRef(null);
   const [fetchedData, setFetchedData] = useState(null);
@@ -20,7 +20,7 @@ const ZayavPoLevel = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getTable();
+        const data = await getObl();
         console.log(data)
         setFetchedData(data);
       } catch (error) {
@@ -38,36 +38,16 @@ const ZayavPoLevel = () => {
       chartRef.current.destroy();
     }
     if(fetchedData) {
-      const {dates, counts, counts1} = fetchedData;
-      console.log(dates, counts, counts1)
-      const labels = dates.map(date => {
-        switch (date) {
-          case '000000001':
-            return 'Бакалавр';
-          case '000000002':
-            return 'Специалист';
-          case '000000003':
-            return 'Магистр';
-          case '000000008':
-            return 'Аспирантура';
-        }
-      });
-      console.log(labels)
+      const {dates, counts} = fetchedData;
       chartRef.current = new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: labels,
+          labels: dates,
           datasets: [{
-            label: 'Заявлений по уровням подготовки',
+            label: 'Заявлений подано по областям',
             data: counts,
             borderWidth: 1,
-          },
-          {
-            label: 'Согласий по уровням подготовки',
-            data: counts1,
-            borderWidth: 1,
-          },
-          ],
+          }],
         },
         options: {
         scales: {
@@ -116,4 +96,4 @@ const ZayavPoLevel = () => {
   );
 };
 
-export default ZayavPoLevel;
+export default OblChart;

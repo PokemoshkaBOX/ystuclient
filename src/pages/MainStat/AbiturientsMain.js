@@ -8,7 +8,7 @@ const AbiturientsMain = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getStudents();
+        let data = await getStudents();
         console.log(data)
         setFetchedData(data);
       } catch (error) {
